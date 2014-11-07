@@ -1,4 +1,4 @@
-andrewjmartin
-=============
+andrewjmartin.net
+=================
 
-Code for personal website
+Code for my personal website. If you see something you like on it, please contact me.

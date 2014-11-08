@@ -55,7 +55,7 @@ docs/_build/
 target/
 
 # CUSTOM ignores
-
+*.sqlite3
 ve
 local_settings.py
 

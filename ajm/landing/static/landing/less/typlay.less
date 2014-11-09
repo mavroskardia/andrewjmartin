@@ -1,0 +1,62 @@
+@tcolor: #ffae00;
+
+#typlay_container {
+	color: @tcolor;
+	border: solid 1px darken(@tcolor, 35%);
+	border-radius: 30px;
+	box-shadow: inset 0px 0px 30px @tcolor;
+	padding: 20px;
+	height: 18em;
+	background-color: #222;
+	font-family: "Share Tech Mono", monospace;
+
+	text-shadow: 0 0 1px #000, 0 -1px 1px lighten(@tcolor, 20%);
+
+	&.cursor-shown:after {
+		content: "";
+		border: solid 1px @tcolor;
+		margin: 2px;
+
+        -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+        -webkit-animation-name: cursorblink;
+                animation-name: cursorblink;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+	}
+
+	a { 
+		color: #00aeff;
+		font-weight: bold; 
+		-webkit-animation-duration: 1s; 
+		        animation-duration: 1s;
+		-webkit-animation-iteration-count: 1;
+		        animation-iteration-count: 1;
+		-webkit-animation-name: linkphaser;
+		        animation-name: linkphaser;
+        text-shadow: none;
+        font-size: 120%;
+	}
+}
+
+@-webkit-keyframes cursorblink {
+	from { border-color: transparent; }
+	to { border-color: @tcolor; }
+}
+
+@keyframes linkphaser {
+	0% { text-shadow: none; font-size: 100%; }
+	50% { text-shadow: 0 0 10px white; font-size: 110%; }
+	100% { text-shadow: none; font-size: 120%; }
+}
+
+@keyframes cursorblink {
+	from { border-color: transparent; }
+	to { border-color: @tcolor; }
+}
+
+@-webkit-keyframes linkphaser {
+	0% { text-shadow: none; font-size: 100%; }
+	50% { text-shadow: 0 0 10px white; }
+	100% { text-shadow: none; font-size: 120%; }
+}

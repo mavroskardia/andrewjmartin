@@ -8,6 +8,16 @@ define([], function () {
 		return Utilities;
 	};
 
+	Utilities.add_class = function (eltid, classname) {
+		var elt = document.getElementById(eltid);
+		if (elt.className.indexOf(classname) == -1) {
+			if (elt.className != '')
+				elt.className += ' ';
+			elt.className += classname;
+		}
+		return Utilities;
+	};
+
 	Utilities.getElementByInnerText = function (innertext) {
 		function search(node) {			
 			for (var i = 0; i < node.childNodes.length; i++) {

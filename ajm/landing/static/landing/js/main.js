@@ -27,7 +27,10 @@
  		Utilities.remove_class('navlinks', 'hidden').remove_class('typlay_container', 'cursor-shown'); 		
  		var name_elt = Utilities.getElementByInnerText('Andrew Martin');
  		name_elt.innerHTML = name_elt.innerHTML.replace('Andrew Martin', '<a href="#">Andrew Martin</a>');
+ 		Utilities.add_class('typlay_interlace', 'fadeout');
  	}
 
- 	typlay.start();
+ 	window.setTimeout(function () {
+ 		typlay.start();
+ 	}, 500);
  });

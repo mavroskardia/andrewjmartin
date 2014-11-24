@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'landing',
     'blog',
     'resume',
+    'tinkerings',
     'compressor'
 )
 

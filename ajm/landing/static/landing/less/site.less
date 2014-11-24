@@ -3,16 +3,41 @@
 	ul {
 		list-style: none;
 		.nospace();
+		margin-top: 1em;
 
-		li a {			
+		li {
 			.nospace();
+			display: inline-block;
+			width: 33%;
 			
-			display: block;
-			line-height: 3em;
-			background-color: #888;
-			margin: 1em;
-			text-indent: 1em;
-			font-weight: bold;
+			a {			
+				.nospace();
+				text-align: center;
+				
+				display: block;
+				line-height: 3em;
+				background-color: #888;
+				background-image: url('../i/interlacet.png');
+				background-repeat: repeat;
+				
+				font-weight: bold;
+
+				transition: background-color 0.2s ease-in, background-image 0.2s ease-in;
+
+				&:hover {
+					transition: background-color 0.2s ease-in, background-image 0.2s ease-in;
+					background-color: #00aeff;
+					background-image: none;
+					color: #fff;
+				}
+			}
 		}
+	}
+}
+
+@media (min-width: 900px) {
+	#navlinks {
+		width: 50%;
+		margin: 0 auto;
 	}
 }

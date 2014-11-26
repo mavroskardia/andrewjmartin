@@ -50,32 +50,6 @@ define(function () {
 		window.setTimeout(this.boundtick, interval);
 	};
 
-	Typlay.prototype.oldtick = function() {		
-		
-		var p = this.paragraphs[this.curparagraph];
-
-		if (p === undefined) {
-			this.onend();
-			return;
-		}
-
-		var t = p[this.index++];
-
-		this.container.innerHTML += (!!t ? t : '');
-
-		// if we are at the end of the line, 
-		// insert a break, go to the next paragraph, and reset the cursor
-
-		if (this.index > p.length) {
-			this.container.innerHTML += '<br/>';
-			this.curparagraph++;
-			this.index = 0;			
-		} 
-
-		var interval = 1000 / this.randbetween(this.minspeed, this.maxspeed);
-		window.setTimeout(this.boundtick, interval);
-	};
-
 	Typlay.prototype.randbetween = function(min, max) {
 		return Math.floor(Math.random() * (max - min + 1) + min);
 	};

@@ -5,8 +5,8 @@ define(function () {
 
 		this.container = document.getElementById(containerid);		
 		
-		this.minspeed = 10;	 	// in cps
-		this.maxspeed = 30;
+		this.minspeed = 20;	 	// in cps
+		this.maxspeed = 40;
 
 		this.current_paragraph = null;
 		this.current_element = null;
@@ -32,47 +32,27 @@ define(function () {
 		}
 
 		if (!this.current_element) {
-			this.current_element = document.createElement('span');			
+			this.current_element = document.createElement('span');
 			this.container.appendChild(this.current_element);
 		}
 
-		var t = this.current_paragraph[this.text_index++];
-		this.current_element.innerHTML += (!!t) ? t : '';
+		var t = this.current_paragraph[this.text_index++];		
+		if (t == '>') {
+			this.current_element.innerHTML += this.current_paragraph;
+			this.text_index = this.current_paragraph.length;
+		} else {
+			this.current_element.innerHTML += (!!t) ? t : '';
+		}
 
 		if (this.text_index >= this.current_paragraph.length) {			
 			this.text_index = 0;
 			this.current_paragraph = null;
 			this.current_element = null;
-			this.container.appendChild(document.createElement('br'));
+			this.container.appendChild(document.createElement('br'));			
 		}
 
 		var interval = 1000 / this.randbetween(this.minspeed, this.maxspeed);
-		window.setTimeout(this.boundtick, interval);
-	};
 
-	Typlay.prototype.oldtick = function() {		
-		
-		var p = this.paragraphs[this.curparagraph];
-
-		if (p === undefined) {
-			this.onend();
-			return;
-		}
-
-		var t = p[this.index++];
-
-		this.container.innerHTML += (!!t ? t : '');
-
-		// if we are at the end of the line, 
-		// insert a break, go to the next paragraph, and reset the cursor
-
-		if (this.index > p.length) {
-			this.container.innerHTML += '<br/>';
-			this.curparagraph++;
-			this.index = 0;			
-		} 
-
-		var interval = 1000 / this.randbetween(this.minspeed, this.maxspeed);
 		window.setTimeout(this.boundtick, interval);
 	};
 

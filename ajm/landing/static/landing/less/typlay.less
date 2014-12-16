@@ -19,10 +19,7 @@
 
 		padding: 1em;
 
-		border: solid 1px #000;
-		border-top-color: #444;
-		border-left-color: #444;
-
+		border-top: solid 1px #444;		
 		color: @tcolor;
 		background-color: #222;
 		font-family: "Share Tech Mono", monospace;
@@ -67,6 +64,7 @@
 		top: 0;
 		height: @theight;
 		width: 100%;
+		opacity: 0.35;
 
 		z-index: 2;
 		background-image: url('../i/interlacet.png');
@@ -91,6 +89,10 @@
 		left: -20px;
 		height: calc(@theight ~"+ 40px");
 		width: ~"calc(100% + 40px)";
+
+		&.fadeout {
+			z-index: -3;
+		}
 	}
 
 }

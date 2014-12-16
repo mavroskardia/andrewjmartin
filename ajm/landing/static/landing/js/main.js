@@ -9,19 +9,16 @@
  		'work = "Software Engineer"',
  		'location = "Florida"',
  		'',
- 		'welcome_msg = """Hi! My name is {}. I\'m a {} who lives in {}.""".format(name, work, location)',
+ 		'welcome_msg = """Hi, my name is {}. I\'m a {} who lives in {}.""".format(name, work, location)',
  		'',
  		'print(welcome_msg)',
  		'',
- 		'> Hi! My name is Andrew Martin. I\'m a Software Engineer who lives in Florida.',
+ 		'> Hi, my name is Andrew Martin. I\'m a Software Engineer who lives in Florida.',
  		'',
  		'show_links()'
 		];
 
  	var typlay = new Typlay('typlay_container', msg.join('\n'));
-
- 	typlay.minspeed = 10;
- 	typlay.maxspeed = 30;
 
  	typlay.onend = function () {
  		Utilities.remove_class('navlinks', 'hidden').remove_class('typlay_container', 'cursor-shown'); 		

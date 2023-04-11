@@ -1,33 +1,20 @@
-import { css, html, LitElement } from "lit";
+import { html, LitElement } from "lit";
 import { customElement } from "lit/decorators.js";
+import "../components/app-shell";
 import "../components/intro-hero";
-import "../components/app-nav";
-import "../components/app-footer";
+import { animationStyles, baseStyles } from "../styles/base";
 
-
-@customElement('ajm-home')
+@customElement("ajm-home")
 export class AjmHome extends LitElement {
   render() {
     return html`
-      <intro-hero></intro-hero>
-      <app-nav></app-nav>
-      <app-footer></app-footer>
+      <app-shell>
+        <intro-hero class="fade-in-left" slot="content"></intro-hero>
+      </app-shell>
     `;
   }
 
-  static styles = css`
-    :host {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    app-footer {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-    }
-  `;
+  static styles = [baseStyles, animationStyles];
 }
 
 declare global {

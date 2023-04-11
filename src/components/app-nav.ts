@@ -7,6 +7,7 @@ export class AppNav extends LitElement {
   render() {
     return html`
       <nav>
+        <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/work">Work</a>
         <a href="/tinkerings">Tinkerings</a>

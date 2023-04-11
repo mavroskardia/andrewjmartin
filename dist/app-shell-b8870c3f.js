@@ -1,5 +1,4 @@
-import { css as o, LitElement as m, html as c } from "lit";
-import { customElement as b } from "lit/decorators.js";
+import { i as o, s as m, x as c, e as b } from "./query-assigned-elements-94c95e81.js";
 const p = o`
   :root {
     --text-color: rgba(255, 255, 255, 0.7);
@@ -160,10 +159,10 @@ const p = o`
     }
   }
 `;
-var h = Object.defineProperty, u = Object.getOwnPropertyDescriptor, w = (s, t, a, r) => {
-  for (var e = r > 1 ? void 0 : r ? u(t, a) : t, i = s.length - 1, n; i >= 0; i--)
-    (n = s[i]) && (e = (r ? n(t, a, e) : n(e)) || e);
-  return r && e && h(t, a, e), e;
+var h = Object.defineProperty, u = Object.getOwnPropertyDescriptor, w = (s, t, r, a) => {
+  for (var e = a > 1 ? void 0 : a ? u(t, r) : t, i = s.length - 1, n; i >= 0; i--)
+    (n = s[i]) && (e = (a ? n(t, r, e) : n(e)) || e);
+  return a && e && h(t, r, e), e;
 };
 let l = class extends m {
   render() {
@@ -200,10 +199,10 @@ l.styles = [
 l = w([
   b("app-nav")
 ], l);
-var X = Object.defineProperty, y = Object.getOwnPropertyDescriptor, x = (s, t, a, r) => {
-  for (var e = r > 1 ? void 0 : r ? y(t, a) : t, i = s.length - 1, n; i >= 0; i--)
-    (n = s[i]) && (e = (r ? n(t, a, e) : n(e)) || e);
-  return r && e && X(t, a, e), e;
+var X = Object.defineProperty, x = Object.getOwnPropertyDescriptor, y = (s, t, r, a) => {
+  for (var e = a > 1 ? void 0 : a ? x(t, r) : t, i = s.length - 1, n; i >= 0; i--)
+    (n = s[i]) && (e = (a ? n(t, r, e) : n(e)) || e);
+  return a && e && X(t, r, e), e;
 };
 let f = class extends m {
   render() {
@@ -245,7 +244,7 @@ f.styles = [
       }
     `
 ];
-f = x([
+f = y([
   b("app-shell")
 ], f);
 export {

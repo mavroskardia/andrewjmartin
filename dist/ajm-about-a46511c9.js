@@ -1,10 +1,9 @@
-import { LitElement as l, html as s, css as m } from "lit";
-import { customElement as p } from "lit/decorators.js";
-import "./app-shell-1c34f911.js";
-var d = Object.defineProperty, f = Object.getOwnPropertyDescriptor, c = (h, i, r, n) => {
-  for (var e = n > 1 ? void 0 : n ? f(i, r) : i, t = h.length - 1, a; t >= 0; t--)
-    (a = h[t]) && (e = (n ? a(i, r, e) : a(e)) || e);
-  return n && e && d(i, r, e), e;
+import { s as l, x as s, i as p, e as m } from "./query-assigned-elements-94c95e81.js";
+import "./app-shell-b8870c3f.js";
+var d = Object.defineProperty, f = Object.getOwnPropertyDescriptor, y = (h, i, n, a) => {
+  for (var e = a > 1 ? void 0 : a ? f(i, n) : i, r = h.length - 1, t; r >= 0; r--)
+    (t = h[r]) && (e = (a ? t(i, n, e) : t(e)) || e);
+  return a && e && d(i, n, e), e;
 };
 let o = class extends l {
   render() {
@@ -53,14 +52,14 @@ let o = class extends l {
     `;
   }
 };
-o.styles = m`
+o.styles = p`
     ol {
       list-style: upper-roman;
       max-width: 40vw;
     }
   `;
-o = c([
-  p("ajm-about")
+o = y([
+  m("ajm-about")
 ], o);
 export {
   o as AjmAbout

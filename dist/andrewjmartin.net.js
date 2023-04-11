@@ -1262,54 +1262,54 @@ it.setRoutes([
     path: "/",
     component: "ajm-home",
     // @ts-ignore
-    action: () => import("./ajm-home-c8519295.js")
+    action: () => import("./ajm-home-4d455617.js")
   },
   {
     path: "/about",
     component: "ajm-about",
     // @ts-ignore
-    action: () => import("./ajm-about-4fcbbc6a.js")
+    action: () => import("./ajm-about-a46511c9.js")
   },
   {
     path: "/work",
     component: "ajm-work",
     // @ts-ignore
-    action: () => import("./ajm-work-625eba48.js")
+    action: () => import("./ajm-work-5241818a.js")
   },
   {
     path: "/tinkerings",
     component: "ajm-tinkerings",
     // @ts-ignore
-    action: () => import("./ajm-tinkerings-5face212.js")
+    action: () => import("./ajm-tinkerings-739fba73.js")
   },
   {
     path: "/technologist",
     component: "ajm-technologist",
     // @ts-ignore
-    action: () => import("./ajm-technologist-7c135f7f.js")
+    action: () => import("./ajm-technologist-3600f8f5.js")
   },
   {
     path: "/classicist",
     component: "ajm-classicist",
     // @ts-ignore
-    action: () => import("./ajm-classicist-2e92cf23.js")
+    action: () => import("./ajm-classicist-ac6e599b.js")
   },
   {
     path: "/futurist",
     component: "ajm-futurist",
     // @ts-ignore
-    action: () => import("./ajm-futurist-474edae5.js")
+    action: () => import("./ajm-futurist-7f4cb393.js")
   },
   {
     path: "/anachronist",
     component: "ajm-anachronist",
     // @ts-ignore
-    action: () => import("./ajm-anachronist-ed8336ae.js")
+    action: () => import("./ajm-anachronist-99755be6.js")
   },
   {
     path: "(.*)",
     component: "ajm-404",
     // @ts-ignore
-    action: () => import("./ajm-404-07fc385e.js")
+    action: () => import("./ajm-404-e0f4113e.js")
   }
 ]);

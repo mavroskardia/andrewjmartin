@@ -1,14 +1,13 @@
-import { css as c, LitElement as h, html as m } from "lit";
-import { customElement as p } from "lit/decorators.js";
-import { b as f, a as d } from "./app-shell-1c34f911.js";
-var g = Object.defineProperty, u = Object.getOwnPropertyDescriptor, v = (n, r, s, t) => {
-  for (var e = t > 1 ? void 0 : t ? u(r, s) : r, a = n.length - 1, o; a >= 0; a--)
-    (o = n[a]) && (e = (t ? o(r, s, e) : o(e)) || e);
-  return t && e && g(r, s, e), e;
+import { i as m, s as h, x as p, e as f } from "./query-assigned-elements-94c95e81.js";
+import { b as c, a as d } from "./app-shell-b8870c3f.js";
+var g = Object.defineProperty, x = Object.getOwnPropertyDescriptor, u = (n, r, a, t) => {
+  for (var e = t > 1 ? void 0 : t ? x(r, a) : r, s = n.length - 1, o; s >= 0; s--)
+    (o = n[s]) && (e = (t ? o(r, a, e) : o(e)) || e);
+  return t && e && g(r, a, e), e;
 };
 let l = class extends h {
   render() {
-    return m`
+    return p`
       <header>
         <h1>Andy Martin</h1>
         <small>
@@ -23,8 +22,8 @@ let l = class extends h {
   }
 };
 l.styles = [
-  f,
-  c`
+  c,
+  m`
       img {
         box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.25),
           0 0 20px 5px rgba(0, 0, 0, 0.25);
@@ -53,26 +52,26 @@ l.styles = [
       }
     `
 ];
-l = v([
-  p("intro-hero")
+l = u([
+  f("intro-hero")
 ], l);
-var x = Object.defineProperty, b = Object.getOwnPropertyDescriptor, _ = (n, r, s, t) => {
-  for (var e = t > 1 ? void 0 : t ? b(r, s) : r, a = n.length - 1, o; a >= 0; a--)
-    (o = n[a]) && (e = (t ? o(r, s, e) : o(e)) || e);
-  return t && e && x(r, s, e), e;
+var v = Object.defineProperty, b = Object.getOwnPropertyDescriptor, _ = (n, r, a, t) => {
+  for (var e = t > 1 ? void 0 : t ? b(r, a) : r, s = n.length - 1, o; s >= 0; s--)
+    (o = n[s]) && (e = (t ? o(r, a, e) : o(e)) || e);
+  return t && e && v(r, a, e), e;
 };
 let i = class extends h {
   render() {
-    return m`
+    return p`
       <app-shell>
         <intro-hero class="fade-in-left" slot="content"></intro-hero>
       </app-shell>
     `;
   }
 };
-i.styles = [f, d];
+i.styles = [c, d];
 i = _([
-  p("ajm-home")
+  f("ajm-home")
 ], i);
 export {
   i as AjmHome

@@ -1,0 +1,26 @@
+{
+  "name": "andrewjmartin.net",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/ajm-app.es.js",
+  "exports": {
+    ".": "./dist/ajm-app.es.js"
+  },
+  "types": "types/ajm-app.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "dependencies": {
+    "lit": "^2.6.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
+  }
+}

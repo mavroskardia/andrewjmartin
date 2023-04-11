@@ -3,11 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/ajm-app.es.js",
+  "main": "dist/index.es.js",
   "exports": {
-    ".": "./dist/ajm-app.es.js"
+    ".": "./dist/index.es.js"
   },
-  "types": "types/ajm-app.d.ts",
+  "types": "types/index.d.ts",
   "files": [
     "dist",
     "types"

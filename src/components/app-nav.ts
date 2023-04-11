@@ -25,6 +25,13 @@ export class AppNav extends LitElement {
         font-size: 1.5rem;
         padding: 2rem;
       }
+      nav a {
+        padding: 1rem 0;
+      }
+
+      nav a:hover {
+        color: rgba(50, 100, 200, 0.8);
+      }
     `,
   ];
 }

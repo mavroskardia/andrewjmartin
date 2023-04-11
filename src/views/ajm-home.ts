@@ -1,11 +1,12 @@
-import { LitElement, css, html } from "lit";
+import { css, html, LitElement } from "lit";
 import { customElement } from "lit/decorators.js";
-import "./components/intro-hero";
-import "./components/app-nav";
-import "./components/app-footer";
+import "../components/intro-hero";
+import "../components/app-nav";
+import "../components/app-footer";
 
-@customElement("ajm-app")
-export class AjmApp extends LitElement {
+
+@customElement('ajm-home')
+export class AjmHome extends LitElement {
   render() {
     return html`
       <intro-hero></intro-hero>
@@ -31,6 +32,6 @@ export class AjmApp extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "ajm-app": AjmApp;
+    "ajm-home": AjmHome;
   }
 }

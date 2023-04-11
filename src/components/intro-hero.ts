@@ -34,6 +34,9 @@ export class IntroHero extends LitElement {
       }
 
       header small {
+        display: block;
+        margin-top: -1rem;
+        margin-left: 2rem;
         font-size: 1.2rem;
         color: rgba(255, 255, 255, 0.5);
       }

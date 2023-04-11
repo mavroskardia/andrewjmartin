@@ -4,11 +4,24 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Lit + TS</title>
+    <title>Andy Martin</title>
     <link rel="stylesheet" href="./src/index.css" />
-    <script type="module" src="/src/ajm-app.ts"></script>
+    <script type="module" src="/src/index.ts"></script>
+    <style>
+      #app {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    </style>
   </head>
   <body>
-    <ajm-app></ajm-app>
+    <main id="app"></main>
   </body>
 </html>

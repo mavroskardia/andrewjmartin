@@ -1,17 +1,17 @@
 import { html, LitElement } from "lit";
 import { customElement } from "lit/decorators.js";
 
-@customElement('ajm-futurist')
-export class AjmFuturist extends LitElement {
+@customElement('ajm-cssjsfun')
+export class AjmCssJsFun extends LitElement {
   render() {
     return html`
       <app-shell>
         <header slot="header">
-          <h1>Futurist</h1>
+          <h1>cssjsfun?</h1>
         </header>
         <section slot="content">
           <p>
-            Futurist
+            cssjsfun
           </p>
         </section>
       </app-shell>
@@ -21,6 +21,6 @@ export class AjmFuturist extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'ajm-futurist': AjmFuturist
+    'ajm-cssjsfun': AjmCssJsFun
   }
 }

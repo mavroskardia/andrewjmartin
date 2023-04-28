@@ -1,19 +1,30 @@
 import { html, LitElement } from "lit";
 import { customElement } from "lit/decorators.js";
 
-@customElement('ajm-tinkerings')
+@customElement("ajm-tinkerings")
 export class AjmTinkerings extends LitElement {
   render() {
     return html`
-      <header>
-        <h1>Tinkerings Andy</h1>
-      </header>
+      <app-shell>
+        <header slot="header">
+          <h1>Tinkerings</h1>
+        </header>
+        <section slot="content">
+          <ul>
+            <li><a href="/lsystem">L-Systems</a></li>
+            <li><a href="/starfield">Starfield</a></li>
+            <li><a href="/games">Games</a></li>
+            <li><a href="/graphing">Graphing</a></li>
+            <li><a href="/cssfun">Fun with CSS & JS</a></li>
+          </ul>
+        </section>
+      </app-shell>
     `;
   }
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'ajm-tinkerings': AjmTinkerings
+    "ajm-tinkerings": AjmTinkerings;
   }
 }

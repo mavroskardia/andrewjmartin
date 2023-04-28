@@ -5,9 +5,16 @@ import { customElement } from "lit/decorators.js";
 export class AjmTechnologist extends LitElement {
   render() {
     return html`
-      <header>
-        <h1>Technologist Andy</h1>
-      </header>
+      <app-shell>
+        <header slot="header">
+          <h1>Futurist</h1>
+        </header>
+        <section slot="content">
+          <p>
+            Futurist
+          </p>
+        </section>
+      </app-shell>
     `;
   }
 }

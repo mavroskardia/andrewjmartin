@@ -51,6 +51,36 @@ router.setRoutes([
     action: () => import("./views/ajm-anachronist"),
   },
   {
+    path: "/lsystems",
+    component: "ajm-lsystems",
+    // @ts-ignore
+    action: () => import("./views/ajm-lsystems"),
+  },
+  {
+    path: "/games",
+    component: "ajm-games",
+    // @ts-ignore
+    action: () => import("./views/ajm-games"),
+  },
+  {
+    path: "/starfield",
+    component: "ajm-starfield",
+    // @ts-ignore
+    action: () => import("./views/ajm-starfield"),
+  },
+  {
+    path: "/graphing",
+    component: "ajm-graphing",
+    // @ts-ignore
+    action: () => import("./views/ajm-graphing"),
+  },
+  {
+    path: "/cssjsfun",
+    component: "ajm-cssjsfun",
+    // @ts-ignore
+    action: () => import("./views/ajm-cssjsfun"),
+  },
+  {
     path: "(.*)",
     component: "ajm-404",
     // @ts-ignore

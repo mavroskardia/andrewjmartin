@@ -19,10 +19,9 @@ export class AjmAbout extends LitElement {
               <a href="https://en.wikipedia.org/wiki/Andy_Martin_(disambiguation)">Andy Martins</a>
               out there.
             </p>
-            <p>
-              After being born and raised in Wisconsin, which does funny things to speech patterns
-              and accents, I moved to Gainesville, Florida. I live here with my incredible wife and kids.
-            </p>
+          </li>
+          <li>
+            <h2>What</h2>
             <p>
               I am a lifelong computer enthusiast. I have fond memories of our family's first computer:
               a Packard Bell 386SX running MS-DOS 5.0 on a 10MB HDD with 4MB of memory. Even before that,
@@ -31,19 +30,24 @@ export class AjmAbout extends LitElement {
             </p>
           </li>
           <li>
-            <h2>What</h2>
+            <h2>Where</h2>
             <p>
-
+              After being born and raised in Wisconsin, which does funny things to speech patterns
+              and accents, I moved to Gainesville, Florida. I live here with my incredible wife and kids.
             </p>
           </li>
           <li>
-            <h2>Where</h2>
-          </li>
-          <li>
             <h2>When</h2>
+            <p>
+              I am old enough to have seen the formation of the web and young enough to have embraced it.
+            </p>
           </li>
           <li>
             <h2>Why</h2>
+            <p>
+              That technology and software creation in specific are combinations of both science and art,
+              I feel both sides of my brain are able to be satisfied in a way no other pursuit can offer.
+            </p>
           </li>
         </ol>
       </app-shell>

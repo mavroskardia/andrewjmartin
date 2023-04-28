@@ -5,9 +5,16 @@ import { customElement } from "lit/decorators.js";
 export class AjmAnachronist extends LitElement {
   render() {
     return html`
-      <header>
-        <h1>Anachronist Andy</h1>
-      </header>
+      <app-shell>
+        <header slot="header">
+          <h1>Anachronist?</h1>
+        </header>
+        <section slot="content">
+          <p>
+            Anachronist (an-ah-krahn-ist)
+          </p>
+        </section>
+      </app-shell>
     `;
   }
 }

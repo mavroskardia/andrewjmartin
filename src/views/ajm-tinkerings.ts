@@ -1,5 +1,6 @@
 import { html, LitElement } from "lit";
 import { customElement } from "lit/decorators.js";
+import { animationStyles, baseStyles } from "../styles/base";
 
 @customElement("ajm-tinkerings")
 export class AjmTinkerings extends LitElement {
@@ -21,6 +22,8 @@ export class AjmTinkerings extends LitElement {
       </app-shell>
     `;
   }
+
+  static styles = [baseStyles, animationStyles];
 }
 
 declare global {

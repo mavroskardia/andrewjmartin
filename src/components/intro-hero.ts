@@ -9,10 +9,10 @@ export class IntroHero extends LitElement {
       <header>
         <h1>Andy Martin</h1>
         <small>
-          <a href="/technologist">Technologist</a>,
-          <a href="/classicist">Classicist</a>,
-          <a href="/futurist">Futurist</a>,
-          <a href="/anachronist">Anachronist?</a>
+          <a href="/#technologist">Technologist</a>,
+          <a href="/#classicist">Classicist</a>,
+          <a href="/#futurist">Futurist</a>,
+          <a href="/#anachronist">Anachronist?</a>
         </small>
       </header>
       <img src="/rocks.jpg" height="800" alt="Andy with daughter in Joshua Tree on rock formation" />

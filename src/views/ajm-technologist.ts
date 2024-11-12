@@ -7,11 +7,11 @@ export class AjmTechnologist extends LitElement {
     return html`
       <app-shell>
         <header slot="header">
-          <h1>Futurist</h1>
+          <h1>Technologist</h1>
         </header>
         <section slot="content">
           <p>
-            Futurist
+            Technologist
           </p>
         </section>
       </app-shell>

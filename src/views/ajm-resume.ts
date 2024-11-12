@@ -18,6 +18,8 @@ export class AjmResume extends LitElement {
       font-size: 1rem;
       line-height: 1.25rem;
       overflow: hidden;
+      display: flex;
+      flex-direction: row-reverse;
     }
 
     div {
@@ -30,7 +32,7 @@ export class AjmResume extends LitElement {
       float: left;
       background-color: rgba(25,125,200,0.125);
       height: 100vh;
-      width: 30vw;
+      width: 55vw;
       padding: 1rem;
     }
 
@@ -39,10 +41,14 @@ export class AjmResume extends LitElement {
       padding: 0 1rem; margin: 0;
     }
 
+    li {
+      display: block;
+      padding: 0.5rem 0;
+    }
+
     a {
       color: rgb(200, 125, 25);
       text-decoration: none;
-      display: inline-block;
       padding: 0.5rem 0;
       font-weight: 300;
     }
@@ -68,47 +74,55 @@ export class AjmResume extends LitElement {
       padding: 0 0 0.5rem 0;
     }
 
+    section header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h4 {
+      padding: 0; margin: 0;
+    }
+
+    header small {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    header small p {
+      padding: 0; margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      #resume {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: visible;
+      }
+
+      div {
+        overflow: visible;
+        height: auto;
+      }
+
+      aside {
+        float: none;
+        max-width: 100vw;
+      }
+    }
+
+    @media print {
+      aside {
+        max-width: 100vw;
+        width: 55rem;
+      }
+    }
+
   `;
 
   render() {
     return html`
       <div id="resume">
-        <aside>
-          <h3>Contact</h3>
-          <ul>
-            <li>
-              <iconify-icon icon="mdi-light:email"></iconify-icon>
-              <a href="mailto:andrewjmartin@gmail.com">
-                andrewjmartin@gmail.com
-              </a>
-            </li>
-            <li>
-              <iconify-icon icon="ant-design:linkedin-outlined"></iconify-icon>
-              <a href="https://www.linkedin.com/in/-andy-martin/">LinkedIn</a>
-            </li>
-            <li></li>
-          </ul>
-          <h3>Publications</h3>
-          <ul>
-            <li>
-              <a href="#">
-                The Structure of BIM: Understanding the Importance of IFC
-                Standards
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                The Structure of BIM: How IFC Impacts Bidding
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Taking Steps Toward Model as the Legal Document Through Data
-                Standards
-              </a>
-            </li>
-          </ul>
-        </aside>
         <div>
           <header>
             <h1>Andrew Martin</h1>
@@ -135,8 +149,7 @@ export class AjmResume extends LitElement {
               <header>
                 <h4>Chief Technology Officer</h4>
                 <small>
-                  <p>July 2022 - Present</p>
-                  <p>Gainesville, Florida, United States</p>
+                  <p><a href="https://www.infotechinc.com">Infotech</a> | July 2022 - Present</p>
                 </small>
               </header>
               <p>
@@ -242,6 +255,60 @@ export class AjmResume extends LitElement {
             </article>
           </section>
         </div>
+        <aside>
+          <h3>Contact</h3>
+          <ul>
+            <li>
+              <iconify-icon icon="mdi-light:email"></iconify-icon>
+              <a href="mailto:andrewjmartin@gmail.com">
+                andrewjmartin@gmail.com
+              </a>
+            </li>
+            <li>
+              <iconify-icon icon="ant-design:linkedin-outlined"></iconify-icon>
+              <a href="https://www.linkedin.com/in/-andy-martin/">LinkedIn</a>
+            </li>
+            <li></li>
+          </ul>
+          <h3>Top Skills</h3>
+          <ul>
+            <li>
+              <iconify-icon icon="fluent:developer-board-16-regular"></iconify-icon>
+              Software Engineering
+            </li>
+            <li>
+              <iconify-icon icon="clarity:design-line"></iconify-icon>
+              Software Design
+            </li>
+            <li>
+              <iconify-icon icon="pepicons-pencil:people"></iconify-icon>
+              Leadership
+            </li>
+          </ul>
+          <h3>Publications</h3>
+          <ul>
+            <li>
+              <iconify-icon icon="material-symbols-light:article-outline"></iconify-icon>
+              <a href="https://www.infotechinc.com/blog/the-structure-of-bim-understanding-the-importance-of-ifc-standards/">
+                The Structure of BIM: Understanding the Importance of IFC
+                Standards
+              </a>
+            </li>
+            <li>
+              <iconify-icon icon="material-symbols-light:article-outline"></iconify-icon>
+              <a href="https://www.infotechinc.com/blog/bim-how-ifc-impacts-bidding/">
+                The Structure of BIM: How IFC Impacts Bidding
+              </a>
+            </li>
+            <li>
+              <iconify-icon icon="material-symbols-light:article-outline"></iconify-icon>
+              <a href="https://www.infotechinc.com/blog/taking-steps-toward-model-as-the-legal-document-mald-through-data-standards/">
+                Taking Steps Toward Model as the Legal Document Through Data
+                Standards
+              </a>
+            </li>
+          </ul>
+        </aside>
       </div>
     `;
   }

@@ -11,8 +11,7 @@ export class AppNav extends LitElement {
         <a href="/about">About</a>
         <a href="/work">Work</a>
         <a href="/tinkerings">Tinkerings</a>
-        <a href="/other">Other</a>
-        <a href="/and">And</a>
+        <a href="/resume">Resume</a>
       </nav>
     `;
   }

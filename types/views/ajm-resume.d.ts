@@ -1,9 +1,10 @@
 import { LitElement } from "lit";
-export declare class AjmWork extends LitElement {
+export declare class AjmResume extends LitElement {
+    static styles: import("lit").CSSResult;
     render(): import("lit-html").TemplateResult<1>;
 }
 declare global {
     interface HTMLElementTagNameMap {
-        "ajm-work": AjmWork;
+        "ajm-resume": AjmResume;
     }
 }

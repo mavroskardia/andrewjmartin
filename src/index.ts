@@ -81,6 +81,12 @@ router.setRoutes([
     action: () => import("./views/ajm-cssjsfun"),
   },
   {
+    path: "/resume",
+    component: "ajm-resume",
+    // @ts-ignore
+    action: () => import("./views/ajm-resume"),
+  },
+  {
     path: "(.*)",
     component: "ajm-404",
     // @ts-ignore

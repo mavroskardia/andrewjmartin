@@ -176,14 +176,14 @@ export class AjmResume extends LitElement {
               <p>
                 I led Infotech's proprietary software products division.
                 To do so, it was essential to create an environment where each
-                and every member of the division feels motivated and engaged,
-                where they know and believe in their role in achieving our
-                shared goals, and have room to perfect their crafts.
+                and every member of the division felt motivated and engaged,
+                where they knew and believed in their role in achieving our
+                shared goals, and had room to perfect their crafts.
               </p>
               <p>
-                This extends beyond the product division. Developing and
+                This extended beyond the product division. Developing and
                 growing partnerships with those who rely on the successful
-                execution of our strategy means the difference between success
+                execution of our strategy meant the difference between success
                 and fading into obscurity. Technical excellence is table stakes
                 for me, but requires constant vigilance to stay on top of tech
                 trends and responsibly respond with sound architecture and
@@ -196,15 +196,12 @@ export class AjmResume extends LitElement {
                 <small>April 2014 - November 2016</small>
               </header>
               <p>
-                Provided architectural design for large-scale construction
-                management systems. Led successful development on greenfield
-                projects with high risk that have created millions in revenue.
-                Guided development teams in consistent and efficient use of
-                frameworks and provided development direction as needed.
-              </p>
-              <p>
-                Perform UX analysis and UI design. Provided training, hiring,
-                and other supervisory tasks.
+                Provided architectural design, UX analysis, and interface
+                design for large-scale construction management systems. Led
+                successful development of greenfield projects with high risk
+                that have now created millions in revenue. Guided development
+                teams in consistent and efficient use of frameworks and
+                provided development direction as needed.
               </p>
             </article>
             <article>
@@ -214,11 +211,11 @@ export class AjmResume extends LitElement {
               </header>
               <p>
                 Provided architectural design for large-scale construction
-                management systems. Guided development teams in consistent and
-                efficient use of frameworks and provided development direction
-                as needed. Led UI analysis and design, focused on user
-                interaction and accessibility. Provided support for training,
-                hiring, and other supervisory tasks as necessary.
+                management systems. Guided engineering teams in consistent and
+                efficient use of frameworks and provided direction as needed.
+                Led UI analysis and design, focused on user interaction and
+                accessibility. Provided support for training, hiring, and other
+                supervisory tasks.
               </p>
             </article>
             <article>
@@ -228,7 +225,8 @@ export class AjmResume extends LitElement {
               </header>
               <p>
                 Provided architectural design for large-scale construction
-                management systems.
+                management systems. Consistently high engineering output both
+                for new features and eradicating technical debt.
               </p>
             </article>
             <article>

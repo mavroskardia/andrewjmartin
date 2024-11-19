@@ -6,91 +6,200 @@ export class AjmResume extends LitElement {
 
   static styles = css`
 
+    * {
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-text-size-adjust: 100%;
+
+      padding: 0; margin: 0;
+      font-family: Inter, sans-serif;
+      font-weight: 300;
+      line-height: 1;
+      color: #333;
+      background-color: none;
+
+      --accent-color-hue: 160;
+      --accent-color-saturation: 100%;
+      --accent-color-luminance: 25%;
+      --accent-color: hsl(
+        var(--accent-color-hue)
+        var(--accent-color-saturation)
+        var(--accent-color-luminance)
+      );
+
+      --main-bg: hsl(0 100% 100%);
+
+      --aside-bg-h: 160;
+      --aside-bg-s: 100%;
+      --aside-bg-l: 15%;
+      --aside-bg: hsl(
+        var(--aside-bg-h)
+        var(--aside-bg-s)
+        var(--aside-bg-l)
+      );
+
+      --minor-text: hsl(0, 0% 50%);
+    }
+
     #resume {
       position: absolute;
-      top: 0;
-      left: 0;
-      padding: 0; margin: 0;
-      height: 100vh;
-      width: 100vw;
-      font-family: Inter, sans-serif;
-      font-weight: 200;
-      font-size: 1rem;
-      line-height: 1.25rem;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
       overflow: hidden;
       display: flex;
       flex-direction: row-reverse;
-    }
-
-    div {
-      height: 100vh;
-      overflow-y: auto;
-      padding: 0 1rem;
+      background-color: #fff;
     }
 
     aside {
+      box-shadow: rgb(0 0 0 / 27%) -20px 0px 20px 0px inset;
       float: left;
-      background-color: rgba(25,125,200,0.125);
+      background: linear-gradient(
+        to left,
+        hsl(
+          calc(var(--aside-bg-h))
+          var(--aside-bg-s)
+          calc(var(--aside-bg-l))
+        ),
+        hsl(
+          calc(var(--aside-bg-h))
+          var(--aside-bg-s)
+          calc(var(--aside-bg-l) * 0.5)
+        )
+      );
       height: 100vh;
       width: 55vw;
-      padding: 1rem;
+      padding: 5rem 1rem;
     }
 
-    ul {
-      list-style: none;
-      padding: 0 1rem; margin: 0;
+    aside section {
+      margin: 1rem 0;
     }
 
-    li {
-      display: block;
-      padding: 0.5rem 0;
+    aside section h3 {
+      color: hsl(
+        calc(var(--aside-bg-h))
+        calc(var(--aside-bg-s))
+        calc(var(--aside-bg-l) * 2)
+      );
+      font-size: 1.25rem;
+      padding: 1rem 0;
+      border-radius: 50px;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
     }
 
-    a {
-      color: rgb(200, 125, 25);
+    aside section dl {
+      display: grid;
+      grid-template-columns: 1fr 10fr;
+      margin-top: 0.5rem;
+    }
+
+    aside section dt,
+    aside section dd {
+      padding: 0.25rem;
+      color: #ddd;
+    }
+
+    #publications dd,
+    #publications dt,
+    #publications iconify-icon {
+      line-height: 1;
+    }
+
+    #publications dd { margin-bottom: 0.5rem; }
+
+    aside iconify-icon { color: #aaa; }
+
+    aside a {
       text-decoration: none;
       padding: 0.5rem 0;
-      font-weight: 300;
+      color: #ddd;
+      line-height: 1.2;
     }
 
+    a { text-decoration: none; color: var(--accent-color); }
     a:hover, a:focus {
       text-decoration: underline;
     }
 
-    h1 {
-      padding: 0; margin: 1rem 0;
+    #main {
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    #name {
+      margin: 1rem 0 2rem;
+    }
+
+    #name h1 {
+      padding: 1.5rem 0 0 0; margin: 0;
       font-size: 2.5rem;
-      color: rgb(200, 100, 50);
+      color: var(--accent-color);
     }
 
-    header h3 {
+    #name h3 {
+      padding: 0; margin: 0;
       font-weight: 200;
-      font-size: 1rem;
+      font-size: 0.8rem;
+      color: var(--minor-text);
     }
 
-    section > h3 {
-      color: rgba(100, 200, 50, 0.5);
-      border-bottom: solid 1px rgba(100, 200, 50, 0.5);
-      padding: 0 0 0.5rem 0;
+    #main section {
+      margin: 2rem 0;
     }
 
-    section header {
+    #main section h3,
+    #main section iconify-icon {
+      color: var(--accent-color);
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
+
+    #main section h3 {
+      border-bottom: solid 1px var(--accent-color);
+      margin-bottom: 0.5rem;
+    }
+
+    #main section p {
+      line-height: 1.25;
+      margin: 0.5rem 2rem 0.5rem 1rem;
+    }
+
+    #main section header {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    header h4 {
+    #main section header h4,
+    #main section article h4 {
       padding: 0; margin: 0;
+      font-weight: 400;
+      font-size: 1rem;
     }
 
-    header small {
+    #main section header small {
       font-size: 0.75rem;
-      color: rgba(255,255,255,0.5);
+      color: var(--minor-text);
     }
 
-    header small p {
+    #main section header small p {
       padding: 0; margin: 0;
+    }
+
+    #main section article {
+      margin: 1rem 0;
+    }
+
+    #education ul {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    #education li {
+      padding: 0.25rem 1rem;
     }
 
     @media (max-width: 768px) {
@@ -123,13 +232,15 @@ export class AjmResume extends LitElement {
   render() {
     return html`
       <div id="resume">
-        <div>
-          <header>
+        <div id="main">
+          <header id="name">
             <h1>Andrew Martin</h1>
             <h3>Remote | Gainesville, Florida, United States</h3>
           </header>
           <section id="summary">
-            <h3>Summary</h3>
+            <h3>
+              Summary
+            </h3>
             <p>
               I create the environments that identify, develop, and sustain
               teams that create some of the world's most amazing
@@ -144,7 +255,9 @@ export class AjmResume extends LitElement {
             </p>
          </section>
           <section id="experience">
-            <h3>Experience</h3>
+            <h3>
+              Experience
+            </h3>
             <article>
               <header>
                 <h4>Chief Technology Officer</h4>
@@ -154,18 +267,21 @@ export class AjmResume extends LitElement {
               </header>
               <p>
                 As CTO, I am Infotech's technical thought leader for both our
-                proprietary products division and AASHTOWare Project. I am tasked
-                with communicating the history, current state, and future state of
-                all products. I support our product experts to make strategic
+                proprietary products division and AASHTOWare Project, the
+                enterprise solution for state transportation agencies. I
+                communicate the history, current state, and future state of all
+                products. I support our product experts to make strategic
                 decisions for integrations based on our goals and technical
                 feasibility. I evangelize our advancement of the technology and
-                integrations of our current solutions so we can scale and meet our
-                key business objectives.
+                integrations of our current solutions so we can scale and meet
+                our key business objectives.
               </p>
               <p>
-                And so I never become disconnected from the craft, I also create
-                prototypes and proofs-of-concept to demonstrate new ideas and
-                communicate them more effectively.
+                I also create prototypes and proofs-of-concept to demonstrate
+                new ideas, which allows me to maintain my craft in a real way.
+                I then present upon and write about these new ideas, and
+                shephard them through the early phases before helping our
+                teams turn them into products.
               </p>
             </article>
             <article>
@@ -184,128 +300,122 @@ export class AjmResume extends LitElement {
                 This extended beyond the product division. Developing and
                 growing partnerships with those who rely on the successful
                 execution of our strategy meant the difference between success
-                and fading into obscurity. Technical excellence is table stakes
-                for me, but requires constant vigilance to stay on top of tech
-                trends and responsibly respond with sound architecture and
-                application design.
+                and fading into obscurity.
+              </p>
+              <p>
+                Technical excellence is table stakes for me, but requires
+                constant vigilance to stay on top of tech trends and responsibly
+                respond with sound architecture and application design.
               </p>
             </article>
             <article>
               <header>
-                <h4>Senior Lead Software Developer</h4>
-                <small>April 2014 - November 2016</small>
+                <h4>
+                  Progressive Roles in Software Engineering: Senior Lead
+                  Software Developer, Application Architect, Systems Analyst
+                </h4>
+                <small>March 2007 - November 2016</small>
               </header>
               <p>
                 Provided architectural design, UX analysis, and interface
                 design for large-scale construction management systems. Led
                 successful development of greenfield projects with high risk
-                that have now created millions in revenue. Guided development
-                teams in consistent and efficient use of frameworks and
-                provided development direction as needed.
+                that have now created millions of dollars in revenue. Guided
+                development teams in consistent and efficient use of frameworks
+                and provided development direction as needed.
               </p>
-            </article>
-            <article>
-              <header>
-                <h4>Lead Software Developer</h4>
-                <small>October 2011 - April 2014</small>
-              </header>
               <p>
-                Provided architectural design for large-scale construction
-                management systems. Guided engineering teams in consistent and
-                efficient use of frameworks and provided direction as needed.
                 Led UI analysis and design, focused on user interaction and
                 accessibility. Provided support for training, hiring, and other
                 supervisory tasks.
               </p>
-            </article>
-            <article>
-              <header>
-                <h4>Application Architect</h4>
-                <small>July 2009 - October 2011</small>
-              </header>
               <p>
-                Provided architectural design for large-scale construction
-                management systems. Consistently high engineering output both
-                for new features and eradicating technical debt.
+                Consistently high engineering output both for new features and
+                eradicating technical debt.
               </p>
-            </article>
-            <article>
-              <header>
-                <h4>Systems Analyst</h4>
-                <small>March 2007 - July 2009</small>
-              </header>
               <p>
-                Design and development of construction management software
-                using C# and ASP.NET MVC. Focus on UI design and accessibility.
+                Focus on UI design and accessibility.
               </p>
             </article>
           </section>
           <section id="education">
-            <h3>Education</h3>
+            <h3>
+              Education
+            </h3>
             <article>
-              <h4>University of Wisconsin - Madison</h4>
-              <p>
-                B.S., Computer Science · (September 1999 - December 2003)
-              </p>
-              <p>
-                Minor, Classical Humanities
-              </p>
+              <header>
+                <h4>University of Wisconsin - Madison</h4>
+                <small>September 1999 - December 2003</small>
+              </header>
+              <ul>
+                <li>B.S., Computer Science</li>
+                <li>Minor, Classical Humanities</li>
+              </ul>
             </article>
           </section>
         </div>
         <aside>
-          <h3>Contact</h3>
-          <ul>
-            <li>
-              <iconify-icon icon="mdi-light:email"></iconify-icon>
-              <a href="mailto:andrewjmartin@gmail.com">
-                andrewjmartin@gmail.com
-              </a>
-            </li>
-            <li>
-              <iconify-icon icon="ant-design:linkedin-outlined"></iconify-icon>
-              <a href="https://www.linkedin.com/in/-andy-martin/">LinkedIn</a>
-            </li>
-            <li></li>
-          </ul>
-          <h3>Top Skills</h3>
-          <ul>
-            <li>
-              <iconify-icon icon="fluent:developer-board-16-regular"></iconify-icon>
-              Software Engineering
-            </li>
-            <li>
-              <iconify-icon icon="clarity:design-line"></iconify-icon>
-              Software Design
-            </li>
-            <li>
-              <iconify-icon icon="pepicons-pencil:people"></iconify-icon>
-              Leadership
-            </li>
-          </ul>
-          <h3>Publications</h3>
-          <ul>
-            <li>
-              <iconify-icon icon="material-symbols-light:article-outline"></iconify-icon>
-              <a href="https://www.infotechinc.com/blog/the-structure-of-bim-understanding-the-importance-of-ifc-standards/">
-                The Structure of BIM: Understanding the Importance of IFC
-                Standards
-              </a>
-            </li>
-            <li>
-              <iconify-icon icon="material-symbols-light:article-outline"></iconify-icon>
-              <a href="https://www.infotechinc.com/blog/bim-how-ifc-impacts-bidding/">
-                The Structure of BIM: How IFC Impacts Bidding
-              </a>
-            </li>
-            <li>
-              <iconify-icon icon="material-symbols-light:article-outline"></iconify-icon>
-              <a href="https://www.infotechinc.com/blog/taking-steps-toward-model-as-the-legal-document-mald-through-data-standards/">
-                Taking Steps Toward Model as the Legal Document Through Data
-                Standards
-              </a>
-            </li>
-          </ul>
+          <section>
+            <h3>Contact</h3>
+            <dl>
+              <dt><iconify-icon icon="mdi-light:email"></iconify-icon></dt>
+              <dd>
+                <a href="mailto:andrewjmartin@gmail.com">
+                  andrewjmartin@gmail.com
+                </a>
+              </dd>
+              <dt><iconify-icon icon="ant-design:linkedin-outlined"></iconify-icon></dt>
+              <dd>
+                <a href="https://www.linkedin.com/in/-andy-martin/">-andy-martin</a>
+              </dd>
+              <dt>
+                <iconify-icon icon="mdi:github"></iconify-icon>
+              </dt>
+              <dd>
+                <a href="https://github.com/mavroskardia/">GitHub</a>
+              </dd>
+            </dl>
+          </section>
+          <section>
+            <h3>Core Skills</h3>
+            <dl>
+              <dt><iconify-icon icon="fluent:developer-board-16-regular"></iconify-icon></dt>
+              <dd>Software Engineering</dd>
+              <dt><iconify-icon icon="clarity:design-line"></iconify-icon></dt>
+              <dd>Systems Design</dd>
+              <dt><iconify-icon icon="pepicons-pencil:people"></iconify-icon></dt>
+              <dd>Leadership</dd>
+              <dt><iconify-icon icon="system-uicons:speech-typing"></iconify-icon></dt>
+              <dd>Communication</dd>
+              <dt><iconify-icon icon="fluent:organization-20-regular"></iconify-icon></dt>
+              <dd>Organization</dd>
+            </dl>
+          </section>
+          <section>
+            <h3>Publications</h3>
+            <dl id="publications">
+              <dt><iconify-icon icon="material-symbols-light:article-outline"></iconify-icon></dt>
+              <dd>
+                <a href="https://www.infotechinc.com/blog/the-structure-of-bim-understanding-the-importance-of-ifc-standards/">
+                    The Structure of BIM: Understanding the Importance of IFC
+                    Standards
+                </a>
+              </dd>
+              <dt><iconify-icon icon="material-symbols-light:article-outline"></iconify-icon></dt>
+              <dd>
+                <a href="https://www.infotechinc.com/blog/bim-how-ifc-impacts-bidding/">
+                  The Structure of BIM: How IFC Impacts Bidding
+                </a>
+              </dd>
+              <dt><iconify-icon icon="material-symbols-light:article-outline"></iconify-icon></dt>
+              <dd>
+                <a href="https://www.infotechinc.com/blog/taking-steps-toward-model-as-the-legal-document-mald-through-data-standards/">
+                  Taking Steps Toward Model as the Legal Document Through Data
+                  Standards
+                </a>
+              </dd>
+            </dl>
+          </section>
         </aside>
       </div>
     `;
